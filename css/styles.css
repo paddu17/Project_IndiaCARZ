@@ -8065,14 +8065,14 @@ body {
   flex-wrap: wrap;
 }
 .contacts-page .contacts-columns .column {
-  width: 22%;
+  width: 21%;/*width is modified to 21% for 4 columns*/
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   position: relative;
   padding-bottom: 52px;
-  margin-right: 15%;
+  margin-right: 5%;/*changed to 5% as 4 columns are present*/
 }
 .contacts-page .contacts-columns .column:last-child {
   margin-right: 0;
@@ -8091,6 +8091,14 @@ body {
   top: 50%;
   margin-top: -13px;
 }
+/*For registration page adding one more column*/
+.contacts-page .contacts-columns .column.whatsapp ._title:before {
+  background-image: url(https://indiacarz.s3.ap-south-1.amazonaws.com/indiacarz_images/whatsapp.png);/*added s3 image link*/
+  width: 32px;
+  height: 26px;
+  top: 50%;
+  margin-top: -13px;
+}/*end of extra column*/
 .contacts-page .contacts-columns .column.location ._title:before {
   background-image: url(https://indiacarz.s3.ap-south-1.amazonaws.com/indiacarz_images/geo-3.svg);
   width: 24px;
@@ -8225,6 +8233,19 @@ body {
   margin-top: -15px;
   margin-left: -19px;
 }
+/*Adding responsive iframe for registration page*/
+@media screen and (max-width: 999px) {
+  .registeration iframe {
+    width: 100%; 
+  }
+}
+@media screen and (min-width: 1000px){
+  .registeration iframe{
+    width: 50%
+  }
+  
+}/* end of modified code*/
+
 @media screen and (max-width: 1600px) {
   .about-page {
     padding-top: 200px;
